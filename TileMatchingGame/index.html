@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload = "initialize();">
+  <div class = section1> 
+    <div class = "header"> Tiles Match </div>
+    <p> Click on the tiles to reveal the pictures. Good luck! </p>
+    <div class = "score"> Score: <span id = "tracker">0</span></div>
+    <div><button class = "reset" onclick="reset();"> Reset </button></div>
+  </div>
+  <div class = "grid">
+    
+    <div class = "imageDiv">
+      <img onclick = "add(this);" class = "image" style="opacity: 0;" id = "image1"src = "https://images.unsplash.com/photo-1495231916356-a86217efff12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZsb3dlcnxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60">
+    </div>
+    
+    <div class = "imageDiv">
+      <img onclick = "add(this);" class = "image" style="opacity: 0;" id = "image2"src = "https://images.unsplash.com/photo-1503652601-557d07733ddc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGZsb3dlcnxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60">
+    </div>
+    
+    <div class = "imageDiv">
+      <img onclick = "add(this);" class = "image" style="opacity: 0;" id = "image3"src = "https://images.unsplash.com/photo-1508726295872-0b87b9999406?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGZsb3dlcnxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60">
+    </div>
+    
+    <div class = "imageDiv">
+      <img onclick = "add(this);" class = "image" style="opacity: 0;" id = "image4"src = "https://images.unsplash.com/photo-1606041008023-472dfb5e530f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1888&q=80">
+    </div>
+    
+    <div class = "imageDiv">
+      <img onclick = "add(this);" class = "image" style="opacity: 0;" id = "image5"src = "https://images.unsplash.com/photo-1468327768560-75b778cbb551?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGZsb3dlcnxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60">
+    </div>
+    
+    <div class = "imageDiv">
+      <img onclick = "add(this);" class = "image" style="opacity: 0;" id = "image6"src = "https://images.unsplash.com/photo-1585337913966-114ba3cf1f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGZsb3dlcnxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60">
+    </div>
+    
+    <div class = "imageDiv"> 
+      <img onclick = "add(this);" class = "image" style="opacity: 0;" id = "image7"src = "https://images.unsplash.com/photo-1495231916356-a86217efff12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZsb3dlcnxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60">
+    </div>
+      
+    <div class = "imageDiv">
+      <img onclick = "add(this);" class = "image" style="opacity: 0;" id = "image8"src = "https://images.unsplash.com/photo-1442458017215-285b83f65851?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZsb3dlcnxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60">
+    </div>
+    
+    <div class = "imageDiv">
+      <img onclick = "add(this);" class = "image" style="opacity: 0;" id = "image9"src = "https://images.unsplash.com/photo-1475872711536-95ec04b9d290?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80">
+    </div>
+      
+    <div class = "imageDiv">
+      <img onclick = "add(this);" class = "image" style="opacity: 0;" id = "image10"src = "https://images.unsplash.com/photo-1508726295872-0b87b9999406?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGZsb3dlcnxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60">
+    </div>
+      
+    <div class = "imageDiv">
+      <img onclick = "add(this);" class = "image" style="opacity: 0;" id = "image11"src = "https://images.unsplash.com/photo-1468327768560-75b778cbb551?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGZsb3dlcnxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60">
+    </div>
+      
+    <div class = "imageDiv">      
+      <img onclick = "add(this);" class = "image" style="opacity: 0;" id = "image12"src = "https://images.unsplash.com/photo-1585337913966-114ba3cf1f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGZsb3dlcnxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60">
+    </div>
+      
+    <div class = "imageDiv">
+      <img onclick = "add(this);" class = "image" style="opacity: 0;" id = "image13"src = "https://images.unsplash.com/photo-1503652601-557d07733ddc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGZsb3dlcnxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60">
+    </div>
+    
+    <div class = "imageDiv">      
+      <img onclick = "add(this);" class = "image" style="opacity: 0;" id = "image14"src = "https://images.unsplash.com/photo-1606041008023-472dfb5e530f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1888&q=80">
+    </div>
+      
+    <div class = "imageDiv">      
+      <img onclick = "add(this);" class = "image" style="opacity: 0;" id = "image15"src = "https://images.unsplash.com/photo-1442458017215-285b83f65851?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZsb3dlcnxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60">
+    </div>
+      
+    <div class = "imageDiv">      
+      <img onclick = "add(this);" class = "image" style="opacity: 0;" id = "image16"src = "https://images.unsplash.com/photo-1475872711536-95ec04b9d290?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80">   
+    </div>
+  
+  <script src="script.js"></script>
+
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
